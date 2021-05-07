@@ -23,3 +23,7 @@ Please follow along as the instructor builds the API step by step:
 | `/updateAdopter`    | PUT    /adopters/:id      |
 | `/deleteAdopter`    | DELETE /adopters/:id      |
 | `/listAdopterDogs`  | GET    /adopters/:id/dogs |
+
+## Files with Notes:
+- ./api/server.js
+- ./api/adopters/adopters-router.js
