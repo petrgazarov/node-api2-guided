@@ -1,7 +1,23 @@
 const express = require('express');
 
-const Adopter = require('./adopters-model');
+const Adopter = require('./adopters-model.js');
 
+//
+// When we create a Router file, we just create a router object from
+// express.Router(), and then call the .METHOD() methods on the Router object,
+// similar to how we did it with the express() application object before.
+//
+// the middleware/handlers that we create on the Router object are useless
+// unless we "bind" the Router to some URL prefix. This happens with an
+// express().use() call. By specifying a url prefix in the .use() call, and
+// passing in the Router object, the Router object is then bound to that URL
+// prefix, and any HTTP request that begins with that URL prefix will be handled
+// by matching middleware in the Rouer object.
+//
+// THE MAIN REASON we do this is to keep our code clean, concise, modular, and
+// well-organized, which aids in expansion/adding new features,
+// troubleshooting/debugging, testing, and collaborating with other developers.
+//
 const router = express.Router();
 
 router.get('/', (req, res) => {
